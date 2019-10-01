@@ -92,132 +92,122 @@ public class  SalvoApplication {
 				//gamePlayerRepository.save(gp12);
 				//gamePlayerRepository.save(gp14);
 
-	///DATOS DE SHIP
-			//GAME1
-				//SHIP1
-				Set<String> location1 =new HashSet<>();
-				location1.add("H2, H3, H4");
-				Ship ship1=new Ship("Destroyer",gp1,location1);
-				//SHIP2
-				Set<String> location2 =new HashSet<>();
-				location2.add("E1, F1, G1");
-				Ship ship2=new Ship("Submarine ",gp1,location2);
-				//SHIP3
-				Set<String> location3 =new HashSet<>();
-				location3.add("B4, B5");
-				Ship ship3=new Ship("Patrol Boat",gp1,location3);
-				//SHIP4
-				Set<String> location4 =new HashSet<>();
-				location4.add("B5, C5, D5");
-				Ship ship4=new Ship("Destroyer",gp2,location4);
-				//SHIP5
-				Set<String> location5 =new HashSet<>();
-				location5.add("F1, F2");
-				Ship ship5=new Ship("Patrol Boat",gp2,location5);
-			//GAME2
-				//SHIP6
-				Set<String> location6 =new HashSet<>();
-				location6.add("E1, F1, G1");
-				Ship ship6=new Ship("Destroyer",gp3,location6);
-				//SHIP7
-				Set<String> location7 =new HashSet<>();
-				location7.add("C6,C7");
-				Ship ship7=new Ship("Patrol Boat",gp3,location7);
-				//SHIP8
-				Set<String> location8 =new HashSet<>();
-				location8.add("A2, A3, A4");
-				Ship ship8=new Ship("Submarine",gp4,location8);
-				//SHIP9
-				Set<String> location9 =new HashSet<>();
-				location9.add("G6, H6");
-				Ship ship9=new Ship("Patrol Boat",gp4,location9);
-			//GAME3
-				//SHIP10
-				Set<String> location10 =new HashSet<>();
-				location10.add("B5, C5, D5");
-				Ship ship10=new Ship("Destroyer",gp5,location10);
-				//SHIP11
-				Set<String> location11 =new HashSet<>();
-				location11.add("C6,C7");
-				Ship ship11=new Ship("Patrol Boat",gp5,location11);
-				//SHIP12
-				Set<String> location12 =new HashSet<>();
-				location12.add("A2, A3, A4");
-				Ship ship12=new Ship("Submarine",gp6,location12);
-				//SHIP13
-				Set<String> location13 =new HashSet<>();
-				location13.add("G6, H6");
-				Ship ship13=new Ship("Patrol Boat",gp6,location13);
-			//GAME4
-				//SHIP14
-				Set<String> location14 =new HashSet<>();
-				location14.add("B5, C5, D5");
-				Ship ship14=new Ship("Destroyer",gp7,location14);
-				//SHIP15
-				Set<String> location15 =new HashSet<>();
-				location15.add("C6,C7");
-				Ship ship15=new Ship("Patrol Boat",gp7,location15);
-				//SHIP16
-				Set<String> location16 =new HashSet<>();
-				location16.add("A2, A3, A4");
-				Ship ship16=new Ship("Submarine",gp8,location16);
-				//SHIP17
-				Set<String> location17=new HashSet<>();
-				location17.add("G6, H6");
-				Ship ship17=new Ship("Patrol Boat",gp8,location17);
-			//GAME5
-				//SHIP18
-				Set<String> location18 =new HashSet<>();
-				location18.add("B5, C5, D5");
-				Ship ship18=new Ship("Destroyer",gp9,location18);
-				//SHIP19
-				Set<String> location19 =new HashSet<>();
-				location19.add("C6,C7");
-				Ship ship19=new Ship("Patrol Boat",gp9,location19);
-				//SHIP20
-				Set<String> location20 =new HashSet<>();
-				location20.add("A2, A3, A4");
-				Ship ship20=new Ship("Submarine",gp10,location20);
-				//SHIP21
-				Set<String> location21 =new HashSet<>();
-				location21.add("G6, H6");
-				Ship ship21=new Ship("Patrol Boat",gp10,location21);
-			//GAME6
-				//SHIP22
-				Set<String> location22 =new HashSet<>();
-				location22.add("B5, C5, D5");
-				Ship ship22=new Ship("Destroyer",gp11,location22);
-				//SHIP23
-				Set<String> location23 =new HashSet<>();
-				location23.add("C6,C7");
-				Ship ship23=new Ship("Patrol Boat",gp11,location23);
-			//GAME8
-				//SHIP24
-				Set<String> location24 =new HashSet<>();
-				location24.add("B5, C5, D5");
-				Ship ship24=new Ship("Destroyer",gp15,location24);
-				//SHIP25
-				Set<String> location25 =new HashSet<>();
-				location25.add("C6,C7");
-				Ship ship25=new Ship("Patrol Boat",gp15,location25);
-				//SHIP26
-				Set<String> location26 =new HashSet<>();
-				location26.add("A2, A3, A4");
-				Ship ship26=new Ship("Submarine",gp16,location26);
-				//SHIP27
-				Set<String> location27 =new HashSet<>();
-				location27.add("G6, H6");
-				Ship ship27=new Ship("Patrol Boat",gp16,location27);
+	///DATOS DE SHIP				Ship ship22=new Ship("Destroyer",gp11,location22);
+				///DATOS DE SHIP
+				//locations ships
+				Set<String> shipLocation1 = new HashSet<>(Arrays.asList("H2","H3","H3"));
+				Set<String> shipLocation2 = new HashSet<>(Arrays.asList("E1","F1","G1"));
+				Set<String> shipLocation3 = new HashSet<>(Arrays.asList("B4","B5"));
+				Set<String> shipLocation4 = new HashSet<>(Arrays.asList("B5","C5","D5"));
+				Set<String> shipLocation5 = new HashSet<>(Arrays.asList("F1","F2"));
+				Set<String> shipLocation6 = new HashSet<>(Arrays.asList("B5","C5","D5"));
+				Set<String> shipLocation7 = new HashSet<>(Arrays.asList("C6","C7"));
+				Set<String> shipLocation8 = new HashSet<>(Arrays.asList("A2", "A3", "A4"));
+				Set<String> shipLocation9 = new HashSet<>(Arrays.asList("G6","H6"));
+				Set<String> shipLocation10 = new HashSet<>(Arrays.asList("B5","C5","D5"));
+				Set<String> shipLocation11 = new HashSet<>(Arrays.asList("C6","C7"));
+				Set<String> shipLocation12 = new HashSet<>(Arrays.asList("A2", "A3", "A4"));
+				Set<String> shipLocation13 = new HashSet<>(Arrays.asList("G6","H6"));
+				Set<String> shipLocation14 = new HashSet<>(Arrays.asList("B5","C5","D5"));
+				Set<String> shipLocation15 = new HashSet<>(Arrays.asList("C6","C7"));
+				Set<String> shipLocation16 = new HashSet<>(Arrays.asList("A2", "A3", "A4"));
+				Set<String> shipLocation17 = new HashSet<>(Arrays.asList("G6","H6"));
+				Set<String> shipLocation18 = new HashSet<>(Arrays.asList("B5","C5","D5"));
+				Set<String> shipLocation19 = new HashSet<>(Arrays.asList("C6","C7"));
+				Set<String> shipLocation20 = new HashSet<>(Arrays.asList("A2", "A3", "A4"));
+				Set<String> shipLocation21 = new HashSet<>(Arrays.asList("G6","H6"));
+				Set<String> shipLocation22 = new HashSet<>(Arrays.asList("B5","C5","D5"));
+				Set<String> shipLocation23 = new HashSet<>(Arrays.asList("C6","C7"));
+				Set<String> shipLocation24 = new HashSet<>(Arrays.asList("B5","C5","D5"));
+				Set<String> shipLocation25 = new HashSet<>(Arrays.asList("C6","C7"));
+				Set<String> shipLocation26 = new HashSet<>(Arrays.asList("A2", "A3", "A4"));
+				Set<String> shipLocation27 = new HashSet<>(Arrays.asList("G6","H6"));
+				//asignar datos
+
+				//game1
+				Ship ship1 = new Ship("Destroyer",gp1,shipLocation1);
+				Ship ship2 = new Ship("Submarine", gp1, shipLocation2);
+				Ship ship3 = new Ship("Patrol Boat", gp1, shipLocation3);
+				Ship ship4 = new Ship("Destroyer", gp2, shipLocation4);
+				Ship ship5 = new Ship("Patrol Boat", gp2, shipLocation5);
+				//game2
+				Ship ship6 = new Ship("Destroyer", gp3, shipLocation6);
+				Ship ship7 = new Ship("Patrol Boat", gp3, shipLocation7);
+				Ship ship8 = new Ship("Submarine", gp4, shipLocation8);
+				Ship ship9 = new Ship("Patrol Boat", gp4, shipLocation9);
+				//game3
+				Ship ship10 = new Ship("Destroyer", gp5, shipLocation10);
+				Ship ship11 = new Ship("Patrol Boat", gp3, shipLocation11);
+				Ship ship12 = new Ship("Submarine", gp4, shipLocation12);
+				Ship ship13 = new Ship("Patrol Boat", gp4, shipLocation13);
+				//game4
+				Ship ship14 = new Ship("Destroyer", gp3, shipLocation14);
+				Ship ship15 = new Ship("Patrol Boat", gp3, shipLocation15);
+				Ship ship16 = new Ship("Submarine", gp4, shipLocation16);
+				Ship ship17 = new Ship("Patrol Boat", gp4, shipLocation17);
+				//game5
+				Ship ship18 = new Ship("Destroyer", gp3, shipLocation18);
+				Ship ship19 = new Ship("Patrol Boat", gp3, shipLocation19);
+				Ship ship20 = new Ship("Submarine", gp4, shipLocation20);
+				Ship ship21 = new Ship("Patrol Boat", gp4, shipLocation21);
+				//game6
+				Ship ship22 = new Ship("Destroyer", gp3, shipLocation22);
+				Ship ship23 = new Ship("Patrol Boat", gp3, shipLocation23);
+				//game8
+				Ship ship24 = new Ship("Destroyer", gp3, shipLocation24);
+				Ship ship25 = new Ship("Patrol Boat", gp3, shipLocation25);
+				Ship ship26 = new Ship("Submarine", gp4, shipLocation26);
+				Ship ship27 = new Ship("Patrol Boat", gp4, shipLocation27);
 
 				shipRepository.saveAll(Arrays.asList(ship1,ship2,ship3,ship4,ship4,ship5,ship6,ship7,ship8,ship9,ship10,ship11,ship12,ship13,ship14,ship15,ship16,ship17,ship18,ship19,ship20,ship21,ship22,ship23,ship24,ship25,ship26,ship27));
 
 
-	///DATOS DE SALVO
+				///DATOS DE SALVO
+				Set<String> salvoLocation1 = new HashSet<>(Arrays.asList("B5", "C5", "F1"));
+				Set<String> salvoLocation2 = new HashSet<>(Arrays.asList("B4", "B5", "B6"));
+				Set<String> salvoLocation3 = new HashSet<>(Arrays.asList("F2", "D5"));
+				Set<String> salvoLocation4 = new HashSet<>(Arrays.asList("E1", "H3", "A2"));
+				Set<String> salvoLocation5 = new HashSet<>(Arrays.asList("A2", "A4", "G6" ));
+				Set<String> salvoLocation6 = new HashSet<>(Arrays.asList("B5", "D5", "C7"));
+				Set<String> salvoLocation7 = new HashSet<>(Arrays.asList("A3", "H6"));
+				Set<String> salvoLocation8 = new HashSet<>(Arrays.asList("C5", "C6"));
+				Set<String> salvoLocation9 = new HashSet<>(Arrays.asList("G6", "H6", "A4"));
+				Set<String> salvoLocation10 = new HashSet<>(Arrays.asList("H1", "H2", "H3"));
+				Set<String> salvoLocation11= new HashSet<>(Arrays.asList("A2", "A3", "D8"));
+				Set<String> salvoLocation12 = new HashSet<>(Arrays.asList("E1", "F2", "G3"));
+				Set<String> salvoLocation13 = new HashSet<>(Arrays.asList("A3", "A4", "F7"));
+				Set<String> salvoLocation14 = new HashSet<>(Arrays.asList("B5", "C6", "H1"));
+				Set<String> salvoLocation15 = new HashSet<>(Arrays.asList("A2", "G6", "H6"));
+				Set<String> salvoLocation16 = new HashSet<>(Arrays.asList("C5", "C7", "D5"));
+				Set<String> salvoLocation17 = new HashSet<>(Arrays.asList("A1", "A2", "A3"));
+				Set<String> salvoLocation18 = new HashSet<>(Arrays.asList("B5", "B6", "C7"));
+				Set<String> salvoLocation19 = new HashSet<>(Arrays.asList("G6", "G7", "G8"));
+				Set<String> salvoLocation20 = new HashSet<>(Arrays.asList("C6", "D6", "E6"));
+				Set<String> salvoLocation21 = new HashSet<>(Arrays.asList("H1", "H8"));
 
+				Salvo salvo1 = new Salvo(gp1,1,salvoLocation1);
+				Salvo salvo2 = new Salvo(gp2,1,salvoLocation2);
+				Salvo salvo3 = new Salvo(gp1,2,salvoLocation3);
+				Salvo salvo4 = new Salvo(gp2,2,salvoLocation4);
+				Salvo salvo5 = new Salvo(gp3,1,salvoLocation5);
+				Salvo salvo6 = new Salvo(gp4,1,salvoLocation6);
+				Salvo salvo7 = new Salvo(gp3,1,salvoLocation7);
+				Salvo salvo8 = new Salvo(gp4,1,salvoLocation8);
+				Salvo salvo9 = new Salvo(gp5,1,salvoLocation9);
+				Salvo salvo10 = new Salvo(gp6,1,salvoLocation10);
+				Salvo salvo11 = new Salvo(gp5,1,salvoLocation11);
+				Salvo salvo12 = new Salvo(gp6,1,salvoLocation12);
+				Salvo salvo13 = new Salvo(gp7,1,salvoLocation13);
+				Salvo salvo14 = new Salvo(gp8,1,salvoLocation14);
+				Salvo salvo15 = new Salvo(gp7,1,salvoLocation15);
+				Salvo salvo16 = new Salvo(gp8,1,salvoLocation16);
+				Salvo salvo17 = new Salvo(gp9,1,salvoLocation17);
+				Salvo salvo18 = new Salvo(gp10,1,salvoLocation18);
+				Salvo salvo19 = new Salvo(gp9,1,salvoLocation19);
+				Salvo salvo20 = new Salvo(gp10,1,salvoLocation20);
+				Salvo salvo21 = new Salvo(gp10,1,salvoLocation21);
 
-
-
-
+				salvoRepository.saveAll(Arrays.asList(salvo1,salvo2,salvo3,salvo4,salvo5,salvo6,salvo7,salvo8,salvo9,salvo10,salvo11,salvo12,salvo13,salvo14,salvo15,salvo16,salvo17,salvo18,salvo19,salvo20,salvo21));
 
 	///DATOS DE SCORE
 				Score score1 = new Score((float) 0.5,date,p1,g1);

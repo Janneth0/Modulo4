@@ -54,11 +54,10 @@ function isHit(shipLocation,salvoes,playerId) {
   var hit = 0;
   salvoes.forEach(function (salvo) {
     if(salvo.player != playerId)
-    salvo.salvoLocations.forEach(function (salvoLocations){
+    salvo.salvoLocations.forEach(function (salvoLocation){
     //salvo.salvoLocations.forEach(function (salvoLocation) {
     //salvo.salvoLocations.forEach(function (location) {
-    if(shipLocation==salvoLocations)
-           // if(shipLocations === salvoLocations)
+            if(shipLocation === salvoLocation)
           hit = salvo.turn;
       });
   });
