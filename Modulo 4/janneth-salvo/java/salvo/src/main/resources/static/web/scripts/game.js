@@ -19,7 +19,7 @@ function loadData(){
             $('#playerInfo').text(playerInfo[0] + '(you) vs ' + playerInfo[1]);
 
             data.ships.forEach(function(shipPiece){
-                shipPiece.locations.forEach(function(location){
+                shipPiece.shipLocations.forEach(function(location){
                     $('#'+location).addClass('ship-piece');
                 })
             });

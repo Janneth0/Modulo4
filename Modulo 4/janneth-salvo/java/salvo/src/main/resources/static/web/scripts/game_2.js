@@ -35,12 +35,12 @@ function loadData() {
       data.salvoes.forEach(function (salvo) {
         console.log(salvo);
         if (playerInfo[0].id === salvo.player) {
-          salvo.salvoLocations.forEach(function (location) {
-            $('#S_' + location).addClass('salvo');
+          salvo.salvoLocations.forEach(function (salvoLocation) {
+            $('#S_' + salvoLocation).addClass('salvo');
           });
         } else {
-          salvo.salvoLocations.forEach(function (location) {
-            $('#_' + location).addClass('salvo');
+          salvo.salvoLocations.forEach(function (salvoLocation) {
+            $('#_' + salvoLocation).addClass('salvo');
           });
         }
       });
@@ -55,10 +55,9 @@ function isHit(shipLocation,salvoes,playerId) {
   salvoes.forEach(function (salvo) {
     if(salvo.player != playerId)
     salvo.salvoLocations.forEach(function (salvoLocations){
-    //salvo.salvoLocations.forEach(function (salvoLocation) {
-    //salvo.salvoLocations.forEach(function (location) {
+
     if(shipLocation==salvoLocations)
-           // if(shipLocations === salvoLocations)
+
           hit = salvo.turn;
       });
   });
