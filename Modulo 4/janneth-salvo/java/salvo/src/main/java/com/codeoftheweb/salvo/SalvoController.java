@@ -21,6 +21,9 @@ public class SalvoController {
     @Autowired
     private GamePlayerRepository gamePlayerRepository;
 
+    @Autowired
+    private PlayerRepository playerRepository;
+
     @RequestMapping("/games")
     public List<Map<String,Object>> getGames(){
         return gameRepository.findAll()
@@ -70,6 +73,32 @@ public class SalvoController {
         return dto;
 
     }
+
+    @RequestMapping("/leaderBoard")
+    public List<Map<String,Object>> makeLeaderBoard(){
+        return playerRepository
+                .findAll()
+                .stream()
+                .map(player -> playerLeaderBoardDTO(player))
+                .collect(Collectors.toList());
+    }
+    private Map<String, Object> playerLeaderBoardDTO(Player player) {
+        Map<String, Object> dto = new LinkedHashMap<>();
+        dto.put("id", player.getId());
+        dto.put("userName", player.getUserName());
+        dto.put("score", getScoreList(player));
+        return dto;
+    }
+    private Map<String, Object> getScoreList (Player player) {
+        Map<String,Object> dto = new LinkedHashMap<>();
+        dto.put("total", player.getTotalscore());
+        dto.put("won", player.getWins(player.getScores()));
+        dto.put("tied", player.getDraws(player.getScores()));
+        dto.put("lost", player.getLosses(player.getScores()));
+        return dto;
+    }
+
+
 
 
 

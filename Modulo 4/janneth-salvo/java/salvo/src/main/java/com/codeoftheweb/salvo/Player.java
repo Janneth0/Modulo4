@@ -62,6 +62,21 @@ public class Player {
 
 
 
+    public float getWins(Set<Score> puntajes){
+        return puntajes.stream().filter(puntaje -> puntaje.getScore() == 1).count();
+    }
+    public float getLosses(Set<Score> puntajes){
+        return puntajes.stream().filter(puntaje -> puntaje.getScore() == 0).count();
+    }
+    public float getDraws(Set<Score> puntajes){
+        return puntajes.stream().filter(puntaje -> puntaje.getScore() == (float) 0.5).count();
+    }
+    public float getTotalscore (){
+        float victorias = getWins(this.getScores())*1;
+        float empates = getDraws(this.getScores())* (float) 0.5;
+        float derrotas = getLosses(this.getScores()) * 0;
+        return victorias + empates + derrotas;
+    }
 
 
 
