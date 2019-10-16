@@ -1,10 +1,8 @@
 package com.codeoftheweb.salvo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.RequestEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -48,8 +46,20 @@ public class SalvoController {
         Map<String,Object> dto=new LinkedHashMap<String, Object>();
         dto.put("id", gamePlayer.getId());
         dto.put("player", gamePlayer.getPlayer().makePlayerDTO());
+      //dto.put("scores3", gamePlayer.getPlayer().getScores());
+
         return dto;
     }
+
+    /*@RequestMapping("/game_view/{nn}")
+    public ResponseEntity<Map<String,Object> getGameViewByGamePlayerID(@PathVariable Long nn, Autentication autentication) >
+        if(isGuest(authentication)){
+            return new ResponseEntity<>(makeMap("ERRO PASO ALGO"))
+    }*/
+
+
+
+
 
     @RequestMapping("/game_view/{nn}")
     public Map<String, Object> getGameViewByGamePlayerId(@PathVariable Long nn){
@@ -97,6 +107,10 @@ public class SalvoController {
         dto.put("lost", player.getLosses(player.getScores()));
         return dto;
     }
+
+    ///task 2 o 3 ultimo metodp de unidad 5
+    /*@RequestMapping(path = "/game/{gameID}/players",method = RequestMethod.POST)
+    public RequestEntity<Map<String,Object>>*/
 
 
 

@@ -53,10 +53,15 @@ public class Player {
         return scores;
     }
 
+    public void setScores(Set<Score> scores) {
+        this.scores = scores;
+    }
+
     public Map<String,Object> makePlayerDTO(){
         Map<String,Object> dto=new LinkedHashMap<String, Object>();
         dto.put("id",this.getId());
         dto.put("email",this.getUserName());
+        dto.put("scores1",this.getScores());
         return dto;
     }
 

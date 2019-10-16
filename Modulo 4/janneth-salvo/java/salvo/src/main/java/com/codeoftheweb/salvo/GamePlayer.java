@@ -73,6 +73,7 @@ public class GamePlayer {
         Map<String,Object> dto=new LinkedHashMap<>();
         dto.put("id",this.getId());
         dto.put("player",this.getPlayer().makePlayerDTO());
+        //dto.put("score2",this.getPlayer().getScores());
         return dto;
 
     }
