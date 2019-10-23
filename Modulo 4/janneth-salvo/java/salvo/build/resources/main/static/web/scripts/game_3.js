@@ -1,6 +1,4 @@
-$(function() {
-    loadData();
-});
+
 
 function leaderboard() {
 
@@ -14,7 +12,7 @@ function leaderboard() {
 
             function scoreTable(data) {
                 let tablaFormateada = addTableHTML(data);
-                let tablaScore = document.getElementById("leaderBoard");
+                let tablaScore = document.getElementById("tablaLider");
                 tablaScore.innerHTML = tablaFormateada;
             }
 
@@ -24,10 +22,10 @@ function leaderboard() {
                 data.forEach(function (pepito) {
                     tabla += '<tr>';
                     tabla += '<td>' + pepito.userName + '</td>';
-                    tabla += '<td>' + pepito.score.puntajeTotal + '</td>';
-                    tabla += '<td>' + pepito.score.juegosGanados + '</td>';
-                    tabla += '<td>' + pepito.score.juegosPerdidos + '</td>';
-                    tabla += '<td>' + pepito.score.juegosEmpatados + '</td>';
+                    tabla += '<td>' + pepito.score.total + '</td>';
+                    tabla += '<td>' + pepito.score.won + '</td>';
+                    tabla += '<td>' + pepito.score.tied + '</td>';
+                    tabla += '<td>' + pepito.score.lost + '</td>';
                     tabla += '</tr>';
                     tabla += '</tbody>';
                 });
@@ -36,3 +34,4 @@ function leaderboard() {
             scoreTable(data);
         });
 }
+leaderboard();

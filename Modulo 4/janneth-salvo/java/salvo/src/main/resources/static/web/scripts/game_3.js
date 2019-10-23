@@ -19,13 +19,13 @@ function leaderboard() {
             function addTableHTML(data) {
                 var tabla = '<thead  class="thead-dark" ><tr><th>Full Name</th><th>Total</th><th>Won</th><th>Lost</th><th>Tied</th></tr></thead>';
                 tabla += "<tbody>";
-                data.forEach(function (pepito) {
+                data.forEach(function (jugador) {
                     tabla += '<tr>';
-                    tabla += '<td>' + pepito.userName + '</td>';
-                    tabla += '<td>' + pepito.score.total + '</td>';
-                    tabla += '<td>' + pepito.score.won + '</td>';
-                    tabla += '<td>' + pepito.score.tied + '</td>';
-                    tabla += '<td>' + pepito.score.lost + '</td>';
+                    tabla += '<td>' + jugador.userName + '</td>';
+                    tabla += '<td>' + jugador.score.total + '</td>';
+                    tabla += '<td>' + jugador.score.won + '</td>';
+                    tabla += '<td>' + jugador.score.tied + '</td>';
+                    tabla += '<td>' + jugador.score.lost + '</td>';
                     tabla += '</tr>';
                     tabla += '</tbody>';
                 });
