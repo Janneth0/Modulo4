@@ -56,7 +56,7 @@ function crearTabla(){
                 data.forEach(function(players){
                 Gtabla += "<tr>";
                 Gtabla += "<td>" + players.id + "</td>";
-                Gtabla += "<td>" +  players.created.toLocalDateString() + "</td>";
+                Gtabla += "<td>" +   new Date(players.created).toLocaleString()+ "</td>";
                 Gtabla += "<td>" + players.gamePlayers[0].player.email + "</td>";
            Gtabla += "<td>" + (players.gamePlayers.length == 1 ? "      ":players.gamePlayers[1].player.email) + "</td>";
                 Gtabla += "<td></td>";

@@ -56,7 +56,13 @@ function crearTabla(){
                 data.forEach(function(players){
                 Gtabla += "<tr>";
                 Gtabla += "<td>" + players.id + "</td>";
-                Gtabla += "<td>" +  (players.created).toLocaleDateString() + "</td>";
+               //) Gtabla += "<td>" +  players.created.date()+ "</td>";
+                Gtabla += "<td>" +  players.date(created).toLocaleDateString()+ "</td>";
+                //Gtabla += "<td>" +  players.created.date()+ "</td>";
+                //nono  Gtabla += "<td>" +  players.created.toLocaleDateString()+ "</td>";
+                //no n Gtabla += "<td>" +  players.created.toDateString()+ "</td>";
+                //noo Gtabla += "<td>" +  players.created.toTimeString()+ "</td>";
+                //Gtabla += "<td>" +  players.created.toLocaleTimeString()+ "</td>";
                 Gtabla += "<td>" + players.gamePlayers[0].player.email + "</td>";
            Gtabla += "<td>" + (players.gamePlayers.length == 1 ? "      ":players.gamePlayers[1].player.email) + "</td>";
                 Gtabla += "<td></td>";
